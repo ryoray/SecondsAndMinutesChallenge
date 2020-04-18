@@ -15,7 +15,23 @@ public class Main {
 
         long hours = (minutes / 60);
         long remainingMinutes = (minutes % 60);
-        return hours + "h " + remainingMinutes + "m " + seconds + "s";
+
+        String stringHours = hours + "h ";
+        if (hours < 10) {
+            stringHours = "0" + stringHours;
+        }
+
+        String stringMinutes = remainingMinutes + "m ";
+        if (remainingMinutes < 10) {
+            stringMinutes = "0" + stringMinutes;
+        }
+
+        String stringSeconds = seconds + "s";
+        if (seconds < 10) {
+            stringSeconds = "0" + stringSeconds;
+        }
+
+        return stringHours + stringMinutes + stringSeconds;
     }
 
     private static String getDurationString (long seconds) {

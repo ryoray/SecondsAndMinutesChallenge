@@ -9,6 +9,7 @@ public class Main {
         System.out.println(getDurationString(65L, 45L));
         System.out.println(getDurationString(3945L));
         System.out.println(getDurationString(-41));
+        System.out.println(getDurationString(65,9));
     }
 
     private static String getDurationString (long minutes, long seconds) {
